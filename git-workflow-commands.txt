@@ -1,0 +1,44 @@
+git branch <new branch name>
+git checkout <new branch name>
+<make your changes>
+git add -A
+git commit -m 'your comment'
+git push -u origin <new branch name>
+git checkout master
+git pull origin master
+<compre and merge files >
+git merge <new branch name>
+git push origin master
+git branch --merged
+<make sure your new branch is merged>
+git branch -d <new branch name>
+git branch -a
+<only master should be listed>
+git push origin --delete <new branch name>
+
+
+
+#discard changes on your file / reload from remote
+git checkout <filename>
+
+#update message on previous commit.. This will mess with git history.
+git commit --amend -m "your message"
+
+
+#git cherrypick to move the commit from one branch to another
+git log # grab the hash of the commit
+git checkout <you branch to move the commit>
+git cherry-pick <hash of commit>
+git checkout master # remove commit on master
+# reset types
+git reset --soft <hash> # this will remove commit, but retain changes
+git reset <hash> # default reset, this will remove files from stage area & remove commit
+git reset --hard <hash> # this is default reset + revert changes on tracked files.
+git clean -df # remove untracked f -file / d-directories
+# pull back hard reset changes if needed from garbage
+git reflog # lists log of actions performed
+#pick hash of commit you want to pull back
+git checkout <hash>
+# this will puts master on detached state, from here create a new branch and merge with master.
+
+git revert <hash> # to revert your commits without messing with history. Adds new commit 
