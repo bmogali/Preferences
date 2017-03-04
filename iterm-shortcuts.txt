@@ -1,0 +1,5 @@
+
+clearscreen                 Cmd + k
+split pane left-right       Cmd + d
+split pane top-bottom       Cmd + Shift + d
+Paste History               Cmd + Shift + h
